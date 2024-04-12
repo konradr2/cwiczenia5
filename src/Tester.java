@@ -4,6 +4,7 @@ public class Tester extends Employee{
     private ArrayList<String> testTypes;
     public Tester(String fname, String lname, String city, String email, String PESEL, int year) {
         super(fname, lname, city, email, PESEL, year);
+        testTypes = new ArrayList<>();
     }
 
     public void addtestType(String testType){

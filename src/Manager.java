@@ -5,6 +5,7 @@ public class Manager extends Employee{
     ArrayList<Goal> goals;
     public Manager(String fname, String lname, String city, String email, String PESEL, int year) {
         super(fname, lname, city, email, PESEL, year);
+        goals = new ArrayList<>();
     }
 
     public void addGoals(Goal g){

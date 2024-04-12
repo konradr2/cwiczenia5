@@ -5,6 +5,7 @@ public class Developer extends Employee{
 
     public Developer(String fname, String lname, String city, String email, String PESEL, int year) {
         super(fname, lname, city, email, PESEL, year);
+        technologies = new ArrayList<>();
     }
 
     public void addTechnology(Technology t){
