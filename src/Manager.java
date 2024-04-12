@@ -12,32 +12,25 @@ public class Manager extends Employee{
         goals.add(g);
 
     }
-    public boolean isAchivedInCurrentMonth(){
-        Calendar currentDate = Calendar.getInstance();
-        int currentYear = currentDate.get(Calendar.YEAR);
-        int currentMonth = currentDate.get(Calendar.MONTH) + 1;
-        return (year == currentYear );
-    }
-
-    /*
     public int calculateBonusForGoals(){
         int bonus =0;
         for (Goal goal : goals){
-            if(goal.)
+            if(goal.isAchivedInCurrentMonth()){
+                bonus += goal.getBonus();
+            }
 
         }
         return bonus;
     }
-
-     */
 
     public int calculateSalary() {
         int salary = 3000;
         for (int i=0; i<(2024-year); i++){
             salary += 1000;
         }
+        int bonus = calculateBonusForGoals();
 
-        return salary;
+        return salary + bonus;
 
 
     }

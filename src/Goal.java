@@ -1,3 +1,5 @@
+import java.util.Calendar;
+
 public class Goal {
     public int year;
     public int amount1;
@@ -11,6 +13,16 @@ public class Goal {
         this.amount2 = amount2;
         this.type = type;
         this.bonus = bonus;
+    }
+
+    public boolean isAchivedInCurrentMonth(){
+        Calendar currentDate = Calendar.getInstance();
+        int currentYear = currentDate.get(Calendar.YEAR);
+        return (year == currentYear );
+    }
+
+    public int getBonus () {
+        return bonus;
     }
 
 }
